@@ -27,7 +27,14 @@ public class PokemonService {
 		return this.repository.findById(id)
 				.orElseThrow(() -> new PokemonNotFound("Pokemon not found."));
 	}
-
 	
+	public Pokemon update(Integer id, Pokemon pokemon) {
+		pokemon.setId(id);
+		return this.repository.save(pokemon);
+	}
+	
+	public void delete(Integer id) {
+		this.repository.deleteById(id);
+	}
 	
 }
