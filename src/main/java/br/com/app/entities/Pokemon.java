@@ -19,24 +19,24 @@ public class Pokemon {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name = "nome")
-	private String nome;
+	@Column(name = "name")
+	private String name;
 	
 	@Column(name = "level")
 	private Integer level;
 	
 	@ElementCollection
-	@CollectionTable(name = "evolucoes")
-	private List<String> evolucoes;
+	@CollectionTable(name = "evolutions")
+	private List<String> evolutions;
 	
-	@Column(name = "pedra_evolucao")
-	private String pedraEvolucao;
+	@Column(name = "evolution_stone")
+	private String evolutionStone;
 	
-	@Column(name = "descricao")
-	private String descricao;
+	@Column(name = "description")
+	private String description;
 	
-	@Column(name = "foto")
-	private String foto;
+	@Column(name = "photo")
+	private String photo;
 
 	public Integer getId() {
 		return id;
@@ -46,12 +46,12 @@ public class Pokemon {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Integer getLevel() {
@@ -62,41 +62,36 @@ public class Pokemon {
 		this.level = level;
 	}
 
-	public List<String> getEvolucoes() {
-		return evolucoes;
+	public List<String> getEvolutions() {
+		return evolutions;
 	}
 
-	public void setEvolucoes(List<String> evolucoes) {
-		this.evolucoes = evolucoes;
+	public void setEvolutions(List<String> evolutions) {
+		this.evolutions = evolutions;
 	}
 
-	public String getPedraEvolucao() {
-		return pedraEvolucao;
+	public String getEvolutionStone() {
+		return evolutionStone;
 	}
 
-	public void setPedraEvolucao(String pedraEvolucao) {
-		this.pedraEvolucao = pedraEvolucao;
+	public void setEvolutionStone(String evolutionStone) {
+		this.evolutionStone = evolutionStone;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public String getFoto() {
-		return foto;
+	public String getPhoto() {
+		return photo;
 	}
 
-	public void setFoto(String foto) {
-		this.foto = foto;
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
-	
-	
-	
-	
-	
 
 }

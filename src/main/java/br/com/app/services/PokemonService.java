@@ -14,14 +14,20 @@ public class PokemonService {
 	@Autowired
 	PokemonRepository repository;
 	
-	public List<Pokemon> listAllPokemons() {
+	public Pokemon register(Pokemon obj) {
+		return this.repository.save(obj);
+	}
+	
+	
+	public List<Pokemon> findAll() {
 		return this.repository.findAll();
 	}
 	
-	
-	public Pokemon addPokemon(Pokemon obj) {
-		return this.repository.save(obj);
+	public Pokemon findById(Integer id) {
+		return this.repository.findById(id)
+				.orElseThrow(() -> new PokemonNotFound("Pokemon not found."));
 	}
+
 	
 	
 }
