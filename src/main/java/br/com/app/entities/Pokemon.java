@@ -1,5 +1,6 @@
 package br.com.app.entities;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CollectionTable;
@@ -93,5 +94,5 @@ public class Pokemon {
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
-
+	
 }

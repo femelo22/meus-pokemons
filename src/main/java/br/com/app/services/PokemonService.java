@@ -29,12 +29,14 @@ public class PokemonService {
 	}
 	
 	public Pokemon update(Integer id, Pokemon pokemon) {
-		pokemon.setId(id);
+		Pokemon updatedPokemon = this.findById(id);
+		pokemon.setId(updatedPokemon.getId());
 		return this.repository.save(pokemon);
 	}
 	
-	public void delete(Integer id) {
-		this.repository.deleteById(id);
+	public void delete(Integer id) {	
+		Pokemon pokemon = this.findById(id);
+		this.repository.delete(pokemon);
 	}
 	
 }
